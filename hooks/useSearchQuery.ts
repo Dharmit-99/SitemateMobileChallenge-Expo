@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Alert } from 'react-native';
 import newsApiService from '../services/api/newsApi';
-import { NewsArticle } from '../services/types';
+import { NewsArticle } from '../types/types';
 
 export const useSearchQuery = (debounceMs: number = 500) => {
   const [articles, setArticles] = useState<NewsArticle[]>([]);
