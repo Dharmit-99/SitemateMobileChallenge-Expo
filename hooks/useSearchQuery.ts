@@ -9,7 +9,7 @@ export const useSearchQuery = (debounceMs: number = 500) => {
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState('');
 
-  const debounceRef = useRef<number>(null);
+  const debounceRef = useRef<NodeJS.Timeout>(null);
 
   const searchNews = useCallback(async (searchQuery: string) => {
     if (!searchQuery.trim()) {
